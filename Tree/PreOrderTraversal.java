@@ -16,13 +16,13 @@
 class Solution {
 
     private void helper(TreeNode root, ArrayList<Integer> ans) {
-        if (root == null) {
+        if (root == null) { // When the root becomes null -> return from there
             return;
         }
 
-        ans.add(root.val);
-        helper(root.left, ans);
-        helper(root.right, ans);
+        ans.add(root.val); // store the answer the in the arraylist
+        helper(root.left, ans); // calling to the left child
+        helper(root.right, ans); // calling to the right child
     }
 
     public List<Integer> preorderTraversal(TreeNode root) {
